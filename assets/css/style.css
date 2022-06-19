@@ -97,6 +97,7 @@ header ul li a:hover{
     justify-items: end;
     margin-top: 105px;
     margin-left: 4%;
+    
 }
 
 #landingFrame p{
@@ -123,9 +124,58 @@ header ul li a:hover{
     font-style: bold;
 }
 
+
+#about{
+    margin-left: 4%;
+    margin-right: 4%;
+
+}
+
+.startSection{
+    display: grid;
+    width: 100%;
+    grid-template-columns: fit-content(50%) auto fit-content(50%);
+    place-items: center;
+}
+
+.startSection figure {
+    display: grid;
+    grid-template-columns: fit-content(50%) 3fr;
+    column-gap: 10px;
+    margin-left: 0%;
+}
+
+.startSection figure img{
+    align-self: center;
+    justify-self: end;
+}
+
+.startSection figure figcaption{
+    line-height: 49.1px;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--regular-text-color);
+}
+
 .line{
     width: 100%;
     height: 1px;
     background-color: var(--regular-text-color);
     align-self: center;
+}
+
+.startSectionTxt {
+    color:#2222221A;
+    font-size: 72px;
+}
+
+.infFieldImg{
+    z-index: -1;
+    position: relative;
+}
+.saladBackground{
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
