@@ -11,14 +11,17 @@ a{
     font-size: 16px;
 }
 
+h1, p{
+    margin: 0%
+}
+
 li {
     list-style-type: none;
 }
 
 body{
-    width: 1152px;
-    height: 4725px;
     margin: 0 auto;
+    font-family: Nunito, sans-serif;
 }
 
 #backgroundIMage1{
@@ -30,7 +33,7 @@ body{
 
 #backgroundIMage2{
     position: absolute;
-    top: 60%;
+    top: 50%;
     right: 15%;
     z-index: -4;
 }
@@ -46,11 +49,15 @@ header {
 header figure{
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-gap: 10px;
+    column-gap: 10px;
+    margin-left: 0%;
+}
+
+header figure img{
+    justify-self: end;
 }
 
 header figure figcaption{
-    font-family: Nunito, sans-serif;
     font-weight: 500;
     font-size: 28px;
     letter-spacing: 0.3rem;
@@ -82,4 +89,43 @@ header ul li a:hover{
 
 .active{
     color: var(--button-color);
+}
+
+#landingFrame{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: end;
+    margin-top: 105px;
+    margin-left: 4%;
+}
+
+#landingFrame p{
+    font-size: 36px;
+    color: var(--regular-text-color);
+    line-height: 49.1px;
+}
+
+#landingFrame h1{
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--regular-text-color);
+    line-height: 98.21px;
+}
+
+#landingFrame a{
+    border: none;
+    background-color: #DAA520;
+    border-radius: 4px;
+    padding: 20px 50px 20px 50px;
+    text-align: center;
+    color: white;
+    line-height: 98.21px;
+    font-style: bold;
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: var(--regular-text-color);
+    align-self: center;
 }
