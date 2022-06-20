@@ -5,7 +5,10 @@
     --button-color: #DAA520;
 }
 
-
+section{
+    margin-left: 4%;
+    margin-right: 4%;
+}
 a{
     text-decoration: none;
     color: var(--regular-text-color);
@@ -124,7 +127,6 @@ header ul li a:hover{
     text-align: center;
     color: white;
     line-height: 98.21px;
-    font-style: bold;
 }
 
 
@@ -132,18 +134,15 @@ header ul li a:hover{
     margin-left: 4%;
     margin-right: 4%;
     margin-top: 100px;
-
-}
-
-#about span{
-    font-weight: bold;
-}
-
-#about {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 400px auto;
     row-gap: 45px;
+    position: relative
+}
+
+#about span{
+    font-weight: bold;
 }
 
 .startSection{
@@ -220,4 +219,83 @@ header ul li a:hover{
 
 .woodInstruments{
     place-self: center;
+}
+
+#logoBackground{
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    z-index: -2;
+}
+
+#howItWorks{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto;
+    row-gap: 45px;
+    place-items: center;
+}
+
+
+.startSection2{
+    display: grid;
+    width: 100%;
+    grid-template-columns: fit-content(50%) auto fit-content(50%);
+    place-items: center;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.startSection2 figure {
+    display: grid;
+    grid-template-columns: fit-content(50%) 3fr;
+    column-gap: 10px;
+    margin-left: 0%;
+}
+
+.startSection2 figure img{
+    align-self: center;
+    justify-self: end;
+}
+
+.startSection2 figure figcaption{
+    line-height: 49.1px;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--regular-text-color);
+}
+
+#howItWorks figure {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 15px;
+    margin: 0;
+    place-items: center;
+    position: relative;
+    padding-left: 50px;
+}
+
+#howItWorks figure .textUnderImgSectionHowItWorks{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32.74px;
+    color: #000;
+}
+
+.numberImg {
+    position: absolute;
+    top: 30%;
+    left: 0%;
+}
+
+#buttonGetPersonalizd{
+    border: none;
+    background-color: #DAA520;
+    border-radius: 4px;
+    padding: 15px 50px 15px 50px;
+    text-align: center;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 5;
 }
