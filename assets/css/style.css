@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Varela+Round&display=swap');
+
 :root{
     --regular-text-color: #3E3F43;
     --button-color: #DAA520;
 }
+
 
 a{
     text-decoration: none;
@@ -11,8 +14,10 @@ a{
     font-size: 16px;
 }
 
-h1, p{
-    margin: 0%
+h1, h2, p{
+    margin: 0%;
+    font-style: normal;
+    color: var(--regular-text-color);
 }
 
 li {
@@ -21,7 +26,7 @@ li {
 
 body{
     margin: 0 auto;
-    font-family: Nunito, sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 #backgroundIMage1{
@@ -102,14 +107,12 @@ header ul li a:hover{
 
 #landingFrame p{
     font-size: 36px;
-    color: var(--regular-text-color);
     line-height: 49.1px;
 }
 
 #landingFrame h1{
     font-size: 72px;
     font-weight: 700;
-    color: var(--regular-text-color);
     line-height: 98.21px;
 }
 
@@ -128,7 +131,19 @@ header ul li a:hover{
 #about{
     margin-left: 4%;
     margin-right: 4%;
+    margin-top: 100px;
 
+}
+
+#about span{
+    font-weight: bold;
+}
+
+#about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 400px auto;
+    row-gap: 45px;
 }
 
 .startSection{
@@ -136,6 +151,8 @@ header ul li a:hover{
     width: 100%;
     grid-template-columns: fit-content(50%) auto fit-content(50%);
     place-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .startSection figure {
@@ -172,10 +189,35 @@ header ul li a:hover{
 .infFieldImg{
     z-index: -1;
     position: relative;
+    display: grid;
+    place-items: center;
 }
+
+.infFieldTxt{ 
+    place-self: center;
+}
+
+.infFieldTxt h2{
+    font-size: 36px;
+    line-height: 49.1px;
+    font-weight: 600;
+    font-family: Nunito, sans-serif;
+}
+
+.infFieldTxt p{
+    font-size: 24px;
+    line-height: 32.74px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
 .saladBackground{
     z-index: -1;
     position: absolute;
-    left: 0;
+    left: 10%;
     top: 0;
+}
+
+.woodInstruments{
+    place-self: center;
 }
