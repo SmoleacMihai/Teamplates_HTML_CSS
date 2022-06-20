@@ -299,3 +299,38 @@ header ul li a:hover{
     grid-column-start: 1;
     grid-column-end: 5;
 }
+
+#categories{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+}
+
+.startSection3{
+    display: grid;
+    width: 100%;
+    grid-template-columns: fit-content(50%) auto fit-content(50%);
+    place-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.startSection3 figure {
+    display: grid;
+    grid-template-columns: fit-content(50%) 3fr;
+    column-gap: 10px;
+    margin-left: 0%;
+}
+
+.startSection3 figure img{
+    align-self: center;
+    justify-self: end;
+}
+
+.startSection3 figure figcaption{
+    line-height: 49.1px;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--regular-text-color);
+}
