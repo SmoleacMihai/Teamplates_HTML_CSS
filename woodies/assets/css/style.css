@@ -376,3 +376,168 @@ header ul li a:hover{
     color:white;
     background-color: var(--regular-text-color);
 }
+
+#testimony{
+    margin-top: 100px;
+}
+
+.startSection4{
+    display: grid;
+    width: 100%;
+    grid-template-columns: fit-content(50%) auto fit-content(50%);
+    place-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.startSection4 figure {
+    display: grid;
+    grid-template-columns: fit-content(50%) 3fr;
+    column-gap: 10px;
+    margin-left: 0%;
+}
+
+.startSection4 figure img{
+    align-self: center;
+    justify-self: end;
+}
+
+.startSection4 figure figcaption{
+    line-height: 49.1px;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--regular-text-color);
+}
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(2, fit-content(50%)) auto;  
+    grid-template-rows: repeat(2, auto); 
+    column-gap: 75px;
+    row-gap: 20px;
+}
+
+.testimonyImg{
+    border-radius: 30% 0 30% 0  ;
+    margin-left: 100px;
+}
+
+.content .review {
+    border: 1px #A8DCEC solid;
+    border-radius: 0 15% 0 15%;
+    width: 384px;
+    height: 280px;
+}
+
+.rating {
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.review{
+    align-self: flex-start;
+    justify-self: center;
+    display: grid;
+}
+
+.review p {    
+    margin: 10px 20px 10px 40px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.review .userComment{
+    display: grid;
+    grid-template-columns: fit-content(50%) auto;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+}
+
+.review .userComment img {
+    border-radius: 50%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.review .userComment figcaption{
+    color: #AFAFAF;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.selection{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 60px;
+}
+
+.selection .left figure {
+    margin: 0;
+    display: grid;
+    grid-template-columns: fit-content(50%) auto;
+    column-gap: 10px;
+}
+
+.selection .right figure {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto fit-content(50%);
+    column-gap: 10px;
+}
+
+.selection .right figure figcaption{
+    justify-self: end;
+}
+
+.selection .right img{
+    align-self: center;
+}
+
+.selection .left img{
+    align-self: center;
+}
+
+.content .slides {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: end ;
+}
+
+#subscribe{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.convincingArea h2{
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+
+.convincingArea p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.submitArea{
+    display: grid;
+    grid-template-columns: repeat(2, fit-content(50%));
+}
+
+.submitArea button{
+    background-color: var(--button-color);
+    color: white;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;  
+    line-height: 22px;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.submitArea button, input{
+    border: 1px solid var(--button-color);
+}
