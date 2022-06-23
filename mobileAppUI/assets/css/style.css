@@ -1,0 +1,12 @@
+:root{
+
+}
+
+body{
+    background: #1B0A7D;
+}
+
+.selected-card{
+    background: linear-gradient(180deg, rgba(32, 32, 77, 0.2) 0%, rgba(29, 29, 85, 0.2) 100%);
+    border-radius: 40px;
+}
