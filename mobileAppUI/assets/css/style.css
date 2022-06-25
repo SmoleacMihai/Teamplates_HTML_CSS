@@ -4,6 +4,11 @@ h1,p{
     margin: 0;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 body{
     background: #000040;
     width: 428px;
@@ -130,6 +135,7 @@ figure{
 .menu figure {
     display: grid;
     grid-template-rows: auto auto;
+    row-gap: 5px;
 }
 
 .menu figure img{
@@ -138,4 +144,8 @@ figure{
 
 .menu figure figcaption{
     justify-self: center;
+}
+
+.menu a:hover figure img {
+    filter: invert(100%);
 }
