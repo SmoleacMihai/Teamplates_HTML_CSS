@@ -229,3 +229,70 @@ figure{
 .navSelection:hover{
     filter: invert(100%);
 }
+
+/*Analyze page*/
+
+.analyzeHeadear{
+    margin: 20px 30px 0 30px;
+    display: grid;
+    grid-template-columns: fit-content(50%) 1fr;
+}
+
+.analyzeHeadear h1{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    justify-self: center;
+}
+
+.graph-section{
+    margin: 20px 30px 0 30px;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 10px;
+}
+
+.graph-section figure{
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-self: end;
+    column-gap: 5px;
+}
+
+.graph-section figure figcaption{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #B9B2C4;
+}
+
+.graph-section .months{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #B9B2C4;
+}
+
+.totalBalance{
+    margin: 20px 30px 0 30px;
+}
+
+.totalBalance p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #B9B2C4;
+    text-align: center;
+}
+
+.totalBalance h2{
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+}
