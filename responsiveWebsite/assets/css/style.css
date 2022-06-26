@@ -8,6 +8,13 @@ body p {
   margin: 0%;
 }
 
+.login-page-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+}
+
 .login-page-grid .login {
   width: 45%;
 }
@@ -22,7 +29,7 @@ body p {
 }
 
 .login-page-grid .review-section {
-  background-image: url("assets\\img\\reviewBg.png");
+  background-image: url("assets/img/reviewBg.png");
   width: 55%;
   height: 100%;
 }

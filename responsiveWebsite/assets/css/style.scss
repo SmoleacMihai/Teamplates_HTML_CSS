@@ -11,7 +11,8 @@ body{
     margin: 0;
 }
 .login-page-grid{
-    
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     .login{
         .brand{
             .delivery{
@@ -24,7 +25,7 @@ body{
     }
 
     .review-section{
-        background-image: url("assets\\img\\reviewBg.png");
+        background-image: url("assets/img/reviewBg.png");
         width: 55%;
         height: 100%;
     }
