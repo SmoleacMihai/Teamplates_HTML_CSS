@@ -59,7 +59,7 @@ header img {
     margin: 20px 30px 0 30px;
 }
 
-.selected-card .amount-of-money {
+.amount-of-money {
     width: 151px;
     height: 38px;
     place-self: end;
@@ -67,7 +67,7 @@ header img {
     line-height: 38px;
 }
 
-.selected-card .wifi-logo {
+.wifi-logo {
     grid-column-start: 2;
     grid-row-start: 2;
     justify-self: end;
@@ -295,4 +295,51 @@ figure{
     font-weight: 500;
     font-size: 32px;
     line-height: 38px;
+}
+
+/*Bank cards section*/
+
+h1#bankCards{
+    align-self: center;
+}
+
+.balance{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #B9B2C4;
+}
+
+.balanceSection{
+    margin: 20px 30px 50px 30px;
+}
+
+.selected-card2{
+    background: rgb(198,73,255);
+    background: linear-gradient(300deg, rgba(198,73,255,1) 10%, rgba(114,29,145,1) 51%, rgba(51,24,133,1) 82%);
+    border-radius: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto fit-content(50%) auto;
+    width: 368px;
+    height: 230px; 
+    /*top, right, down, left*/
+    margin: 100px 30px 100px 30px;
+    transform: rotate(-90deg);
+}
+
+#card2{
+    position:absolute;
+    top: 60%;
+    right: 40%;
+    transform: rotate(90deg);
+    height: 368px;
+}
+
+.select-card-area{
+    text-align: center;
+}
+
+.select-card-area img{
+    cursor: pointer;
 }
