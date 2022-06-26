@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+
+$primary-color:#4E60FF;
+$login-margins:25%;
+
+body{
+    p{
+        margin: 0%;
+    }
+    font-family: 'Nunito';
+    margin: 0;
+}
+.login-page-grid{
+    
+    .login{
+        .brand{
+            .delivery{
+                color: $primary-color;
+            }
+            font-weight: 800;
+            font-size: 21px;
+        }
+        width: 45%;
+    }
+
+    .review-section{
+        background-image: url("assets\\img\\reviewBg.png");
+        width: 55%;
+        height: 100%;
+    }
+}
