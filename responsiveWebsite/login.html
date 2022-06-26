@@ -11,11 +11,28 @@
     <div class="login-page-grid">
 
         <div class="login">
-            <div class="brand">
+            <div id="brand">
                 <p class="food">Food</p>
                 <p class="delivery">delivery</p>
             </div>
-            <form action=""></form>
+            <h1 class="loginHeadear">Login</h1>
+            <p class="logMessage">Sign in with your data that you entered during your registration.</p>
+            <form>
+                <div class="email-input">
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="name@example.com">
+                </div>
+                <div class="password-input">
+                    <label for="password">Password</label>
+                    <input type="text" placeholder="min. 8 characters">
+                </div>
+                <div class="keep-logged">
+                    <img src="assets/img/uncheckedCheckBox.png" alt="checkBox" onclick="changeState()" id="checkbox">
+                    <label for="keepLogged">Keep me logged in</label>
+                </div>
+                <input type="submit" value="Login">
+                <a href="#">Forgot password</a>
+            </form>
         </div>
 
         <div class="review-section">
@@ -27,5 +44,6 @@
         </div>
 
     </div>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

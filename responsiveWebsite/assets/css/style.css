@@ -17,15 +17,93 @@ body p {
 
 .login-page-grid .login {
   width: 45%;
+  place-self: center;
 }
 
-.login-page-grid .login .brand {
+.login-page-grid .login #brand {
   font-weight: 800;
   font-size: 21px;
 }
 
-.login-page-grid .login .brand .delivery {
+.login-page-grid .login #brand .delivery {
   color: #4E60FF;
+}
+
+.login-page-grid .login .loginHeadear {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 82px;
+  letter-spacing: 0.1px;
+  color: #2B2B43;
+}
+
+.login-page-grid .login .logMessage {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #545563;
+}
+
+.login-page-grid .login form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[5];
+      grid-template-rows: repeat(5, auto);
+}
+
+.login-page-grid .login form .email-input, .login-page-grid .login form .password-input {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+}
+
+.login-page-grid .login form .email-input label, .login-page-grid .login form .password-input label {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #545563;
+}
+
+.login-page-grid .login form .email-input input, .login-page-grid .login form .password-input input {
+  border: 1px solid #C7C8D2;
+  border-radius: 8px;
+  height: 44px;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+}
+
+.login-page-grid .login form .email-input input::-webkit-input-placeholder, .login-page-grid .login form .password-input input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #83859C;
+}
+
+.login-page-grid .login form .email-input input:-ms-input-placeholder, .login-page-grid .login form .password-input input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #83859C;
+}
+
+.login-page-grid .login form .email-input input::-ms-input-placeholder, .login-page-grid .login form .password-input input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #83859C;
+}
+
+.login-page-grid .login form .email-input input::placeholder, .login-page-grid .login form .password-input input::placeholder {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #83859C;
+}
+
+.login-page-grid .login form .keep-logged input {
+  border: 2px solid #C7C8D2;
+  border-radius: 4px;
 }
 
 .login-page-grid .review-section {

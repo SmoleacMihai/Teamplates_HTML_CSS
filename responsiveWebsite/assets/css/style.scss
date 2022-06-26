@@ -14,14 +14,60 @@ body{
     display: grid;
     grid-template-columns: repeat(2, auto);
     .login{
-        .brand{
+        width: 45%;
+        place-self: center;
+        #brand{
             .delivery{
                 color: $primary-color;
             }
             font-weight: 800;
             font-size: 21px;
         }
-        width: 45%;
+        .loginHeadear{
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 82px;
+            letter-spacing: 0.1px;
+            color: #2B2B43;
+        }
+        .logMessage{
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.1px;
+            color: #545563;
+        }
+        form{
+            display: grid;
+            grid-template-rows: repeat(5, auto);
+            .email-input, .password-input{
+                display: grid;
+                grid-template-rows: repeat(2, auto);
+                label{
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #545563;
+                }
+                input{
+                    border: 1px solid #C7C8D2;
+                    border-radius: 8px;
+                    height: 44px;
+                    justify-self: stretch;
+                }
+                input::placeholder{
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 0.1px;
+                    color: #83859C;
+                }
+            }
+            .keep-logged{
+                input{
+                    border: 2px solid #C7C8D2;
+                    border-radius: 4px;
+                }
+            }
+        }
     }
 
     .review-section{
