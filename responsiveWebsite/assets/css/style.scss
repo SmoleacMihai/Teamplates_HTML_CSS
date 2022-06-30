@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
 
 $primary-color:#4E60FF;
+$secondary-color:#2B2B43;
 $login-margins:25%;
 
 body{
     p{
         margin: 0%;
+    }
+    a{
+        text-decoration: none;
+        color:$secondary-color;
     }
     font-family: 'Nunito';
     margin: 0;
@@ -28,17 +33,19 @@ body{
             font-size: 60px;
             line-height: 82px;
             letter-spacing: 0.1px;
-            color: #2B2B43;
+            color: $secondary-color;
         }
         .logMessage{
             font-size: 14px;
             line-height: 20px;
             letter-spacing: 0.1px;
             color: #545563;
+            margin-bottom: 20px;
         }
         form{
             display: grid;
             grid-template-rows: repeat(5, auto);
+            row-gap: 20px;
             .email-input, .password-input{
                 display: grid;
                 grid-template-rows: repeat(2, auto);
@@ -62,10 +69,47 @@ body{
                 }
             }
             .keep-logged{
+                display: grid;
+                grid-template-columns: fit-content(50%) auto;
+                column-gap: 10px;
                 input{
                     border: 2px solid #C7C8D2;
                     border-radius: 4px;
                 }
+                #checkbox{
+                    place-self: center;   
+                }
+            }
+            #logIn{
+                cursor: pointer;
+                background: $primary-color;
+                box-shadow: 0px 8px 20px rgba(78, 96, 255, 0.16);
+                border-radius: 8px;
+                padding: 12px 16px;
+                border: none;
+                font-family: 'Nunito';
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+                color: #FFFFFF;
+            }
+            .forgotPassword{
+                place-self: center;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+                color: $primary-color;
+            }
+        }
+        .signUp{
+            margin-top: 50px;
+            text-align: center;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #545563;
+            .signUpLink{
+                color: $primary-color;
             }
         }
     }

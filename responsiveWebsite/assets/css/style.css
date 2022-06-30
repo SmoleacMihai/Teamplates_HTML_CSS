@@ -8,6 +8,11 @@ body p {
   margin: 0%;
 }
 
+body a {
+  text-decoration: none;
+  color: #2B2B43;
+}
+
 .login-page-grid {
   display: -ms-grid;
   display: grid;
@@ -42,6 +47,7 @@ body p {
   line-height: 20px;
   letter-spacing: 0.1px;
   color: #545563;
+  margin-bottom: 20px;
 }
 
 .login-page-grid .login form {
@@ -49,6 +55,7 @@ body p {
   display: grid;
   -ms-grid-rows: (auto)[5];
       grid-template-rows: repeat(5, auto);
+  row-gap: 20px;
 }
 
 .login-page-grid .login form .email-input, .login-page-grid .login form .password-input {
@@ -101,9 +108,58 @@ body p {
   color: #83859C;
 }
 
+.login-page-grid .login form .keep-logged {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: fit-content(50%) auto;
+      grid-template-columns: fit-content(50%) auto;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
 .login-page-grid .login form .keep-logged input {
   border: 2px solid #C7C8D2;
   border-radius: 4px;
+}
+
+.login-page-grid .login form .keep-logged #checkbox {
+  place-self: center;
+}
+
+.login-page-grid .login form #logIn {
+  cursor: pointer;
+  background: #4E60FF;
+  -webkit-box-shadow: 0px 8px 20px rgba(78, 96, 255, 0.16);
+          box-shadow: 0px 8px 20px rgba(78, 96, 255, 0.16);
+  border-radius: 8px;
+  padding: 12px 16px;
+  border: none;
+  font-family: 'Nunito';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.login-page-grid .login form .forgotPassword {
+  place-self: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4E60FF;
+}
+
+.login-page-grid .login .signUp {
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #545563;
+}
+
+.login-page-grid .login .signUp .signUpLink {
+  color: #4E60FF;
 }
 
 .login-page-grid .review-section {
