@@ -27,7 +27,7 @@
                     <input type="text" placeholder="min. 8 characters">
                 </div>
                 <div class="keep-logged">
-                    <img src="assets/img/uncheckedCheckBox.png" alt="checkBox" onclick="changeState()" id="checkbox">
+                    <img src="assets/img/uncheckedCheckBox.png" alt="checkBox" id="checkbox">
                     <label for="keepLogged">Keep me logged in</label>
                 </div>
                 <input type="submit" value="Login" id="logIn">
@@ -37,11 +37,49 @@
         </div>
 
         <div class="review-section">
-            <article>
-                <div class="overall-rating">
-                    <p>Overall rating</p>        
+            <div class="reviews">
+
+                <div class="rating">
+                    <p class="overAllRating">Overall rating</p>
+                    <div class="numberRating">4.2</div>
+                    <div class="starsRating">
+                        <img src="assets/img/activeStar.png" alt="star">
+                        <img src="assets/img/activeStar.png" alt="star">
+                        <img src="assets/img/activeStar.png" alt="star">
+                        <img src="assets/img/activeStar.png" alt="star">
+                        <img src="assets/img/star.png" alt="star">
+                        <p class="ratingNrOfVotes"></p>
+                    </div>        
                 </div>
-            </article>
+                <div class="line"></div>
+
+                <div class="sortBy">
+                    <select name="sortBt" id="sortBy">
+                        <option value="newFirst">Sory By: <span>Newest First</span></option>
+                    </select>
+                </div>
+                <div class="line"></div>
+
+                <div class="comments">
+                    <div class="coment">
+                            <img src="" alt="avatar">
+                            <div class="nameAndRating">
+                                <p class="commentName"></p>
+                                <div class="starsRating">
+                                    <img src="assets/img/activeStar.png" alt="star">
+                                    <img src="assets/img/activeStar.png" alt="star">
+                                    <img src="assets/img/activeStar.png" alt="star">
+                                    <img src="assets/img/activeStar.png" alt="star">
+                                    <img src="assets/img/star.png" alt="star">
+                                    <p class="howLongAgoWasRated"></p>
+                                </div>
+                            </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+           
         </div>
 
     </div>
