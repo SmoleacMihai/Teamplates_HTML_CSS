@@ -41,20 +41,26 @@
 
                 <div class="rating">
                     <p class="overAllRating">Overall rating</p>
-                    <div class="numberRating">4.2</div>
                     <div class="starsRating">
-                        <img src="assets/img/activeStar.png" alt="star">
-                        <img src="assets/img/activeStar.png" alt="star">
-                        <img src="assets/img/activeStar.png" alt="star">
-                        <img src="assets/img/activeStar.png" alt="star">
-                        <img src="assets/img/star.png" alt="star">
-                        <p class="ratingNrOfVotes"></p>
-                    </div>        
+                        <div class="numberRating">4.2</div>
+                        <div class="stars">
+                            <img src="assets/img/activeStar.png" alt="star">
+                            <img src="assets/img/activeStar.png" alt="star">
+                            <img src="assets/img/activeStar.png" alt="star">
+                            <img src="assets/img/activeStar.png" alt="star">
+                            <img src="assets/img/star.png" alt="star">
+                        </div>
+                        <p class="ratingNrOfVotes">3 votes</p>
+                    </div>   
+                    <a href="" class="leaveReview">Leave Review</a>     
                 </div>
+
                 <div class="line"></div>
 
                 <div class="sortBy">
                     <select name="sortBt" id="sortBy">
+                        <option value="newFirst">Sory By: <span>Newest First</span></option>
+                        <option value="newFirst">Sory By: <span>Most Popular</span></option>
                         <option value="newFirst">Sory By: <span>Newest First</span></option>
                     </select>
                 </div>
@@ -62,7 +68,7 @@
 
                 <div class="comments">
                     <div class="coment">
-                            <img src="" alt="avatar">
+                            <img src="assets/img/firstUser.png" alt="avatar">
                             <div class="nameAndRating">
                                 <p class="commentName"></p>
                                 <div class="starsRating">
@@ -71,11 +77,20 @@
                                     <img src="assets/img/activeStar.png" alt="star">
                                     <img src="assets/img/activeStar.png" alt="star">
                                     <img src="assets/img/star.png" alt="star">
-                                    <p class="howLongAgoWasRated"></p>
+                                    <p class="howLongAgoWasRated">30 days ago</p>
                                 </div>
                             </div>
-                        
-
+                            <p class="commentContent">Lorem ipsum dolor sit amet, adhuc nulla definiebas mei ad, ei doming aperiam delicata est.</p>
+                            <div class="likesAndDislikes">
+                                <figure class="likes">
+                                    <img src="assets/img/like.png" alt="like">
+                                    <figcaption class="likesNr">13</figcaption>
+                                </figure>
+                                <figure class="dislikes">
+                                    <img src="assets/img/dislike.png" alt="dislike">
+                                    <figcaption class="dislikesNr">4</figcaption>
+                                </figure>
+                            </div>
                     </div>
                 </div>
             </div>
