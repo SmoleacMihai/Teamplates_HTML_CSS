@@ -3,11 +3,13 @@
 $primary-color:#4E60FF;
 $secondary-color:#2B2B43;
 $login-margins:25%;
+$hundred-pixels: 100px;
 
 body{
     font-family: 'Nunito';
     margin: 0;
     height: 100vh;
+    z-index: -99999;
     p{
         margin: 0%;
     }
@@ -24,7 +26,8 @@ body{
     grid-template-columns: 45% 55%;
     width: 100%;
     height: 100%!important;
-    .login{
+
+    .login-section{
         width: 45%;
         place-self: center;
         #brand{
@@ -121,9 +124,11 @@ body{
     }
 
     .review-section{
+        z-index: 0;
         background: #697BFF; 
         position: relative;   
         .reviews{ 
+            z-index: -1;
             background: #FFFFFF; 
             border-radius: 14.3086px;
             position: absolute;
@@ -238,6 +243,162 @@ body{
                     }
                 }
             }
+        }
+
+        .addToCart{
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr;
+            background: #FFFFFF; 
+            border-radius: 14px;
+            position: absolute;
+            width: 290px;
+            height: 300px;
+            left: calc(40% + 132px/2 + 72px/2);
+            top: 100px;
+            .addToCartContent{
+                margin: 10px;
+                .productName, .productDescription, .moneyRelated{
+                    margin: 5px;
+                }
+    
+                .productImg{    
+                    border-radius: 14px;
+                }
+    
+                .productName{
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 24px;
+                    letter-spacing: 0.1px;
+                    color: $secondary-color;
+                }
+    
+                .productDescription{
+                    font-size: 13px;
+                    line-height: 18px;
+                    letter-spacing: 0.2px;
+                    color: #83859C;
+                }
+    
+                .moneyRelated{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    .productPrice{
+                        justify-self: start;
+                        font-weight: 800;
+                        font-size: 24px;
+                        line-height: 32px;
+                        letter-spacing: 0.1px;
+                        color: $secondary-color;
+                    }
+                    
+                    .addToCartButton{
+                        justify-self: end;
+                    }
+
+                }
+            }
+        }
+
+        .addToCart2{
+            z-index: 1;
+            background-color: white;
+            width: 618px;
+            height: 132px;
+            left: calc(50% - 618px/2 - 26px);
+            top: 410px;
+            filter: drop-shadow(0px 0px 80px rgba(49, 57, 120, 0.4));
+            border-radius: 14px;
+            position: absolute;
+            .addToCartContent{
+                display: grid;
+                grid-template-columns: repeat(3, fit-content(50%));
+                column-gap: 10px;
+                margin: 10px;
+                .productImg{
+                    border-radius: 14px;
+                }
+                .productDetails{
+    
+                    .productName{
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 24px;
+                        letter-spacing: 0.1px;
+                        color: $secondary-color;
+                    }
+        
+                    .productDescription{
+                        font-size: 13px;
+                        line-height: 18px;
+                        letter-spacing: 0.2px;
+                        color: #83859C;
+                    }
+    
+                    .productPrice{
+                        font-weight: 800;
+                        font-size: 24px;
+                        line-height: 32px;
+                        letter-spacing: 0.1px;
+                        color: $secondary-color;
+                    }
+    
+                }
+    
+                .addingToCartSection{
+                    display: grid;
+                    grid-template-rows: repeat(2, auto);
+    
+                    .counter{
+                        align-self:end;
+                        justify-self: center;
+                        display: grid;
+                        grid-template-columns: repeat(3, fit-content(50%));
+                        column-gap: 20px;
+                        .count{
+                            font-weight: 700;
+                            font-size: 14px;
+                            line-height: 20px;
+                            color: $secondary-color;
+                        }
+                    }
+                    .addToCartButton{
+                        align-self: center;
+                        padding: 10px 20px 10px 20px;
+                        color: $primary-color;
+                        background-color: #F3F4FF;
+                        border-radius: 7px;
+                    }
+                }
+            }
+        }
+
+        .review-message{
+            position: absolute;
+            bottom: 5%;
+            h1{
+                color: white;
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 42px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 20px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+/*Login page media querry*/
+@media (max-width:1200px) {
+    .login-page-grid{
+        grid-template-columns: 1fr;
+        .review-section{
+            display: none;
         }
     }
 }
