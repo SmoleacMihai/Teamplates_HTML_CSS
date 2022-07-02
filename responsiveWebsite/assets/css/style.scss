@@ -510,6 +510,42 @@ body{
         margin-top: 5px;
         background-color: #EDEEF2;
     }
+    .discounts-section{
+        margin-top: 24px;
+        .discounts-section-content{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 19px;
+            .column-left{
+                background-color:#F3F4FF;
+                border-radius: 16px;
+
+                .classification{
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: $secondary-color;
+                }
+                .discountAmount{
+                    font-weight: 800;
+                    font-size: 40px;
+                    line-height: 56px;
+                    color: $primary-color;
+                }
+                .classification2{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 0.1px;
+                    color: #83859C;
+                }
+            }
+            .column-right{
+                background-color: #FFF3ED;
+                border-radius: 16px;
+                
+            }
+        }
+    }
 }
 
 
