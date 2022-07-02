@@ -21,6 +21,8 @@ body{
         margin: 0%;
     }
 }
+
+/*Login page*/
 .login-page-grid{
     display: grid;
     grid-template-columns: 45% 55%;
@@ -405,6 +407,128 @@ body{
     }
 }
 
+/*Home page*/
+
+.home-page-content{
+    margin-left: 11%;
+    margin-right: 11%;
+    .header{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 10px;
+        
+        .left-column{
+            display: grid;
+            grid-template-columns: repeat(2, fit-content(50%));
+            align-items: center;
+            column-gap: 40px;
+
+            #brand{
+                .delivery{
+                    color: $primary-color;
+                }
+                font-weight: 800;
+                font-size: 21px;
+            }
+    
+            .search-container{
+                display: grid;
+                grid-template-columns: repeat(2, fit-content(50%));
+                
+                .search-input{
+                    background: #EDEEF2;
+                    border-radius: 12px 0 0 12px;
+                }
+    
+                .search-input:focus{
+                    outline: none;
+                }
+    
+                .search-input[type=text]{
+                    padding: 12px;
+                    font-size: 14px;
+                    color: #83859C;
+                    border: none;
+                }
+    
+                .search-button{
+                    cursor: pointer;
+                    color: #83859C;
+                    border: none;
+                    border-radius: 0 12px 12px 0;
+                    padding-right: 10px;
+                }
+            }
+
+        }
+        .right-column{
+            display: grid;
+            grid-template-columns: repeat(2, fit-content(50%));
+            column-gap: 20px;
+            justify-self: end;
+            align-self: center;
+            .nav-links{
+                display: grid;
+                grid-template-columns: repeat(4, fit-content(50%));
+                column-gap: 20px;
+                align-items: center;
+                font-weight: 700;
+                font-size: 14px;
+                color: #2B2B43;
+                white-space: nowrap;
+
+                .line{
+                    width: 1px;
+                    height: 32px;
+                    background-color: #EDEEF2;
+                }
+
+            }
+
+            .nav-account-and-bag{
+                display: grid;
+                grid-template-columns: repeat(4, fit-content(50%));
+                column-gap: 10px;
+
+                .line{
+                    align-self: center;
+                    width: 1px;
+                    height: 32px;
+                    background-color: #EDEEF2;
+                }
+
+            
+            }
+        }
+    }
+    .end-line{
+        width: 500%;
+        margin-right: -200%;
+        margin-left: -200%;
+        height: 1px;
+        margin-top: 5px;
+        background-color: #EDEEF2;
+    }
+}
+
+
+@media screen {
+    .header{
+        .right-column{
+            .nav-account-and-bag{
+                .line{
+                    display: none;
+                }
+                .menuBtn{
+                    i{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
 
 /*Login page media querry*/
 @media (max-width:1200px) {
@@ -412,6 +536,53 @@ body{
         grid-template-columns: 1fr;
         .review-section{
             display: none;
+        }
+    }
+}
+
+/*Home page headear*/
+@media (max-width:990px){
+    .header{
+        .left-column{
+            .search-container{
+                .search-input, .search-button{
+                    display: none;
+                }
+            }
+        }
+        .right-column{
+            .nav-links{
+                grid-template-columns: 0px;
+                .link{
+                    display: none;
+                }
+            }
+            .nav-account-and-bag{
+                .line{
+                    display: block;
+                }
+                .menuBtn{
+                    display: block;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 54px;
+                    height: 54px;
+                    background: #EDEEF2;
+                    border-radius: 16px;
+                    color: #83859C;
+
+                    i{
+                        display: block;
+                    }
+                }
+
+                .menuBtn:hover{
+                    cursor: pointer;
+                    background-color: $primary-color;
+                    color: white;
+                }
+            }
         }
     }
 }
