@@ -408,7 +408,6 @@ body{
 }
 
 /*Home page*/
-
 .home-page-content{
     margin-left: 11%;
     margin-right: 11%;
@@ -519,19 +518,32 @@ body{
             .column-left{
                 background-color:#F3F4FF;
                 border-radius: 16px;
+                display: grid;
+                grid-template-rows: repeat(3, auto);
+                grid-template-columns: repeat(2, 1fr);
+
+                .pancake{
+                    grid-row-start: 1;
+                    grid-row-end: 4;
+                    align-self: end;
+                }
 
                 .classification{
+                    align-self: center;
                     font-weight: 600;
                     font-size: 20px;
                     color: $secondary-color;
                 }
+
                 .discountAmount{
                     font-weight: 800;
                     font-size: 40px;
                     line-height: 56px;
                     color: $primary-color;
                 }
+                
                 .classification2{
+                    align-self: center;
                     font-weight: 400;
                     font-size: 14px;
                     line-height: 20px;
@@ -543,6 +555,38 @@ body{
                 background-color: #FFF3ED;
                 border-radius: 16px;
                 
+                display: grid;
+                grid-template-rows: repeat(3, auto);
+                grid-template-columns: repeat(2, 1fr);
+
+                .burger{
+                    grid-row-start: 1;
+                    grid-row-end: 4;
+                    align-self: end;
+                }
+
+                .classification{
+                    align-self: center;
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: $secondary-color;
+                }   
+
+                .discountAmount{
+                    font-weight: 800;
+                    font-size: 40px;
+                    line-height: 56px;
+                    color: $primary-color;
+                }
+                
+                .classification2{
+                    align-self: center;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 0.1px;
+                    color: #83859C;
+                }
             }
         }
     }
@@ -572,6 +616,18 @@ body{
         grid-template-columns: 1fr;
         .review-section{
             display: none;
+        }
+    }
+}
+
+/*Home page discounts*/
+@media (max-width:1065px){
+    .discounts-section{
+        .discounts-section-content{
+            display: block;
+            display: grid;
+            grid-template-rows: repeat(2, auto);
+            row-gap: 19px;
         }
     }
 }
