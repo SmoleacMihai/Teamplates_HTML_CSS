@@ -776,18 +776,6 @@ body figure {
   }
 }
 
-/*Home page discounts*/
-@media (max-width: 1065px) {
-  .discounts-section .discounts-section-content {
-    display: block;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: (auto)[2];
-        grid-template-rows: repeat(2, auto);
-    row-gap: 19px;
-  }
-}
-
 /*Home page headear*/
 @media (max-width: 990px) {
   .header .left-column .search-container .search-input, .header .left-column .search-container .search-button {
@@ -827,6 +815,72 @@ body figure {
     cursor: pointer;
     background-color: #4E60FF;
     color: white;
+  }
+}
+
+/*Home page discounts*/
+@media screen and (max-width: 1065px) {
+  .home-page-content .discounts-section .discounts-section-content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+    row-gap: 19px;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .home-page-content .discounts-section .discounts-section-content .column-left .pancake {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+    -ms-grid-row: 3;
+        grid-row-start: 3;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .home-page-content .discounts-section .discounts-section-content .column-left .classification {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .home-page-content .discounts-section .discounts-section-content .column-left .discountAmount {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    margin-left: 10px;
+  }
+  .home-page-content .discounts-section .discounts-section-content .column-left .classification2 {
+    margin-top: 10px;
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    margin-right: 10px;
+  }
+  .home-page-content .discounts-section .discounts-section-content .column-right .burger {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+    -ms-grid-row: 3;
+        grid-row-start: 3;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .home-page-content .discounts-section .discounts-section-content .column-right .classification {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .home-page-content .discounts-section .discounts-section-content .column-right .discountAmount {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    margin-left: 10px;
+  }
+  .home-page-content .discounts-section .discounts-section-content .column-right .classification2 {
+    margin-top: 10px;
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    margin-right: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
