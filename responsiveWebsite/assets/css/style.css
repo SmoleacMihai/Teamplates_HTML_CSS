@@ -671,6 +671,7 @@ body figure {
       grid-template-rows: repeat(3, auto);
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  white-space: nowrap;
 }
 
 .home-page-content .discounts-section .discounts-section-content .column-left .pancake {
@@ -718,6 +719,7 @@ body figure {
       grid-template-rows: repeat(3, auto);
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  white-space: nowrap;
 }
 
 .home-page-content .discounts-section .discounts-section-content .column-right .burger {
@@ -756,6 +758,56 @@ body figure {
   color: #83859C;
 }
 
+.home-page-content .categories {
+  margin-top: 32px;
+}
+
+.home-page-content .categories .grid-wraper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+.home-page-content .categories .grid-wraper .content-box {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: #F8F9FF;
+  border: 1px solid #697BFF;
+  border-radius: 16px;
+  padding: 10px 0 10px 0;
+  cursor: pointer;
+}
+
+.home-page-content .categories .grid-wraper .content-box .category {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  row-gap: 5px;
+}
+
+.home-page-content .categories .grid-wraper .content-box .category .category-name {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #545563;
+}
+
+.home-page-content .categories .grid-wraper .active {
+  background: #F3F4FF;
+  border: 2px solid #4E60FF;
+  border-radius: 16px;
+}
+
+.home-page-content .categories .grid-wraper .active .category .category-name {
+  color: #4E60FF;
+}
+
 @media screen {
   .header .right-column .nav-account-and-bag .line {
     display: none;
@@ -787,6 +839,10 @@ body figure {
   }
   .header .right-column .nav-links .link {
     display: none;
+  }
+  .header .right-column .nav-account-and-bag {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
   }
   .header .right-column .nav-account-and-bag .line {
     display: block;
@@ -826,6 +882,16 @@ body figure {
     -ms-grid-rows: (auto)[2];
         grid-template-rows: repeat(2, auto);
     row-gap: 19px;
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .home-page-content .discounts-section .discounts-section-content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+    row-gap: 15px;
   }
 }
 
@@ -881,6 +947,18 @@ body figure {
     -ms-grid-column-align: end;
         justify-self: end;
     margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .home-page-content .categories .grid-wraper {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+    row-gap: 15px;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */

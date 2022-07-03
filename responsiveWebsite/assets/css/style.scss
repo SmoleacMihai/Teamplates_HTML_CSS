@@ -521,6 +521,7 @@ body{
                 display: grid;
                 grid-template-rows: repeat(3, auto);
                 grid-template-columns: repeat(2, 1fr);
+                white-space: nowrap;
 
                 .pancake{
                     grid-row-start: 1;
@@ -558,6 +559,8 @@ body{
                 display: grid;
                 grid-template-rows: repeat(3, auto);
                 grid-template-columns: repeat(2, 1fr);
+                white-space: nowrap;
+
 
                 .burger{
                     grid-row-start: 1;
@@ -586,6 +589,51 @@ body{
                     line-height: 20px;
                     letter-spacing: 0.1px;
                     color: #83859C;
+                }
+            }
+        }
+    }
+    .categories{
+        margin-top: 32px;
+
+        .grid-wraper{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            column-gap: 30px;
+            .content-box{
+                display: grid;
+                place-items: center;
+                background: #F8F9FF;
+                border: 1px solid #697BFF;
+                border-radius: 16px;
+                padding: 10px 0 10px 0;
+                cursor: pointer;
+
+                .category{
+                    display: grid;
+                    place-items: center;
+                    row-gap: 5px;
+
+                    .category-name{
+                        font-weight: 700;
+                        font-size: 13px;
+                        line-height: 18px;
+                        text-align: center;
+                        letter-spacing: 0.1px;
+                        color: #545563;
+                    }
+                    
+                }
+            }
+            .active{
+                background: #F3F4FF;
+                border: 2px solid $primary-color;
+                border-radius: 16px;
+
+                .category{
+                    .category-name{
+                        color: $primary-color;
+                    }
                 }
             }
         }
@@ -639,6 +687,7 @@ body{
                 }
             }
             .nav-account-and-bag{
+                grid-column-start: 1;
                 .line{
                     display: block;
                 }
@@ -681,6 +730,19 @@ body{
     }
 }
 
+
+
+@media screen and (max-width:1230px) {
+    .home-page-content{
+        .discounts-section{
+            .discounts-section-content{
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(2, auto);
+                row-gap: 15px;
+            }
+        }
+    }
+}
 @media screen and (max-width:625px) {
     .home-page-content{
         .discounts-section{
@@ -743,6 +805,19 @@ body{
                         
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:750px){
+    .home-page-content{
+        .categories{
+            .grid-wraper{
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2,auto);
+                row-gap: 15px;
+                column-gap: 15px;
             }
         }
     }
