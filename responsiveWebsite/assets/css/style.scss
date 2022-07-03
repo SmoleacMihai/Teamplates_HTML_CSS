@@ -638,6 +638,22 @@ body{
             }
         }
     }
+    .restaurants-section{
+        .nearby-restaurants{
+
+        }
+
+        .grid-wraper{
+            .card{
+                display: grid;
+                grid-template-rows: 58% 42%;
+
+                .card-img{
+                   
+                }
+            }
+        }
+    }
 }
 
 

@@ -808,6 +808,13 @@ body figure {
   color: #4E60FF;
 }
 
+.home-page-content .restaurants-section .grid-wraper .card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 58% 42%;
+      grid-template-rows: 58% 42%;
+}
+
 @media screen {
   .header .right-column .nav-account-and-bag .line {
     display: none;
