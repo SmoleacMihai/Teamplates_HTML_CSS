@@ -836,8 +836,9 @@ body figure {
   display: grid;
   -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 10px;
 }
 
 .home-page-content .restaurants-section .grid-wraper .card {
@@ -847,12 +848,66 @@ body figure {
   display: grid;
   -ms-grid-rows: 160px auto;
       grid-template-rows: 160px auto;
+  row-gap: 10px;
+  border: 1px solid #EDEEF2;
+  border-radius: 16px;
 }
 
 .home-page-content .restaurants-section .grid-wraper .card .bg-img {
   background-image: url("/assets/img/restaurant1.png");
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+.home-page-content .restaurants-section .grid-wraper .card .card-inf {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+}
+
+.home-page-content .restaurants-section .grid-wraper .card .card-inf .row1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr fit-content(50%);
+      grid-template-columns: 1fr fit-content(50%);
+}
+
+.home-page-content .restaurants-section .grid-wraper .card .card-inf .row1 .name {
+  color: #2B2B43;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.home-page-content .restaurants-section .grid-wraper .card .card-inf .delivery-time-and-price {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (fit-content(50%))[3];
+      grid-template-columns: repeat(3, fit-content(50%));
+  place-items: center;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+
+.home-page-content .restaurants-section .grid-wraper .card .card-inf .delivery-time-and-price .time {
+  font-weight: 600;
+  font-size: 12px;
+  color: #83859C;
+}
+
+.home-page-content .restaurants-section .grid-wraper .card .card-inf .delivery-time-and-price .circle {
+  width: 3px;
+  height: 3px;
+  background-color: #4E60FF;
+  border-radius: 50%;
+}
+
+.home-page-content .restaurants-section .grid-wraper .card .card-inf .delivery-time-and-price .price {
+  font-weight: 600;
+  font-size: 12px;
+  color: #83859C;
 }
 
 @media screen {
