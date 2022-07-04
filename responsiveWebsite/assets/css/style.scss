@@ -482,7 +482,9 @@ body{
                     height: 32px;
                     background-color: #EDEEF2;
                 }
-
+                .link:hover{
+                    color: $primary-color;
+                }
             }
 
             .nav-account-and-bag{
@@ -603,8 +605,8 @@ body{
             .content-box{
                 display: grid;
                 place-items: center;
-                background: #F8F9FF;
-                border: 1px solid #697BFF;
+                background: #FFFFFF;
+                border: 1px solid #EDEEF2;
                 border-radius: 16px;
                 padding: 10px 0 10px 0;
                 cursor: pointer;
@@ -625,7 +627,12 @@ body{
                     
                 }
             }
+            .content-box:hover{
+                background: #F8F9FF;
+                border: 1px solid #697BFF;
+            }
             .active{
+                pointer-events: none;
                 background: #F3F4FF;
                 border: 2px solid $primary-color;
                 border-radius: 16px;
@@ -639,17 +646,32 @@ body{
         }
     }
     .restaurants-section{
+        margin-top: 40px;
         .nearby-restaurants{
-
+            font-weight: 600;
+            font-size: 20px;    
+            line-height: 28px;
+            letter-spacing: 0.1px;
+            color: #2B2B43;
+            margin-bottom: 16px;
         }
 
         .grid-wraper{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            // justify-content: space-between;
+            column-gap: 30px;
+            
             .card{
+                align-content: stretch;
                 display: grid;
-                grid-template-rows: 58% 42%;
-
-                .card-img{
-                   
+                // grid-template-columns: fit-content(50%);
+                grid-template-rows: 160px auto;
+                
+                .bg-img{
+                   background-image: url("/assets/img/restaurant1.png");
+                   background-repeat: no-repeat;
+                   background-size: 100%;
                 }
             }
         }
@@ -838,3 +860,27 @@ body{
         }
     }
 }
+
+// @media screen and (min-width:1230px){
+//     .home-page-content{
+//         .restaurants-section{
+//             .grid-wraper{
+//                 display: grid;
+//                 grid-template-columns: repeat(auto-fit, minmax(350px, 3fr));
+                
+//             }
+//         }
+//     }
+// }
+
+// // @media screen and (min-width:9px){
+// //     .home-page-content{
+// //         .restaurants-section{
+// //             .grid-wraper{
+// //                 display: grid;
+// //                 grid-template-columns: repeat(auto-fit, minmax(245px, 3fr));
+                
+// //             }
+// //         }
+// //     }
+// // }

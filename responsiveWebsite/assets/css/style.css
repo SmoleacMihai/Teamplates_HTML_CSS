@@ -622,6 +622,10 @@ body figure {
   background-color: #EDEEF2;
 }
 
+.home-page-content .header .right-column .nav-links .link:hover {
+  color: #4E60FF;
+}
+
 .home-page-content .header .right-column .nav-account-and-bag {
   display: -ms-grid;
   display: grid;
@@ -775,8 +779,8 @@ body figure {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  background: #F8F9FF;
-  border: 1px solid #697BFF;
+  background: #FFFFFF;
+  border: 1px solid #EDEEF2;
   border-radius: 16px;
   padding: 10px 0 10px 0;
   cursor: pointer;
@@ -798,7 +802,13 @@ body figure {
   color: #545563;
 }
 
+.home-page-content .categories .grid-wraper .content-box:hover {
+  background: #F8F9FF;
+  border: 1px solid #697BFF;
+}
+
 .home-page-content .categories .grid-wraper .active {
+  pointer-events: none;
   background: #F3F4FF;
   border: 2px solid #4E60FF;
   border-radius: 16px;
@@ -808,11 +818,41 @@ body figure {
   color: #4E60FF;
 }
 
-.home-page-content .restaurants-section .grid-wraper .card {
+.home-page-content .restaurants-section {
+  margin-top: 40px;
+}
+
+.home-page-content .restaurants-section .nearby-restaurants {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+  color: #2B2B43;
+  margin-bottom: 16px;
+}
+
+.home-page-content .restaurants-section .grid-wraper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 58% 42%;
-      grid-template-rows: 58% 42%;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+.home-page-content .restaurants-section .grid-wraper .card {
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 160px auto;
+      grid-template-rows: 160px auto;
+}
+
+.home-page-content .restaurants-section .grid-wraper .card .bg-img {
+  background-image: url("/assets/img/restaurant1.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 @media screen {
