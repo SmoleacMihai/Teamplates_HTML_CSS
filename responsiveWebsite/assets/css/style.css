@@ -910,6 +910,36 @@ body figure {
   color: #83859C;
 }
 
+.home-page-content .restaurants-section .grid-wraper .card .card-inf .badges {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -ms-grid-columns: (90px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 90px);
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.home-page-content .restaurants-section .grid-wraper .card .card-inf .badges .badge {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (fit-content(50%))[2];
+      grid-template-columns: repeat(2, fit-content(50%));
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+  padding: 4px 10px;
+  background: #EDEEF2;
+  border-radius: 100px;
+  place-items: center;
+}
+
+.home-page-content .restaurants-section .grid-wraper .card .card-inf .badges .badge .badge-text {
+  font-weight: 600;
+  font-size: 12px;
+  color: #545563;
+}
+
 @media screen {
   .header .right-column .nav-account-and-bag .line {
     display: none;

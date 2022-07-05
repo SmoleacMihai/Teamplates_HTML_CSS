@@ -719,6 +719,29 @@ body{
                             color: #83859C;
                         }
                     }
+                    .badges{
+                        display: grid;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        grid-template-columns: repeat(auto-fit, 90px);
+                        column-gap: 10px;
+                        .badge{
+                            
+                            display: grid;
+                            grid-template-columns: repeat(2, fit-content(50%));
+                            column-gap: 8px;
+                            padding: 4px 10px;
+                            background: #EDEEF2;
+                            border-radius: 100px;
+                            place-items: center;
+
+                            .badge-text{
+                                font-weight: 600;
+                                font-size: 12px;
+                                color: #545563;
+                            }
+                        }
+                    }
                 }
             }
         }
