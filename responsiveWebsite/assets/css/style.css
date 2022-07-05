@@ -825,8 +825,6 @@ body figure {
 .home-page-content .restaurants-section .nearby-restaurants, .account-settings-page .restaurants-section .nearby-restaurants {
   font-weight: 600;
   font-size: 20px;
-  line-height: 28px;
-  letter-spacing: 0.1px;
   color: #2B2B43;
   margin-bottom: 16px;
 }
@@ -955,7 +953,9 @@ body figure {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  row-gap: 15px;
+  -ms-grid-rows: (fit-content(50%))[5];
+      grid-template-rows: repeat(5, fit-content(50%));
+  row-gap: 16px;
 }
 
 .page-content-grid .settings-section .Settings {
@@ -969,6 +969,9 @@ body figure {
   border: 1px solid #EDEEF2;
   border-radius: 16px;
   color: #2B2B43;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 
 .page-content-grid .settings-section .setting-box .setting {
@@ -1010,9 +1013,11 @@ body figure {
 
 .page-content-grid .account-section {
   color: #2B2B43;
+  margin-top: 20px;
 }
 
 .page-content-grid .account-section .Account {
+  margin-bottom: 16px;
   font-weight: 600;
   font-size: 20px;
 }
@@ -1023,14 +1028,13 @@ body figure {
 }
 
 .page-content-grid .account-section .account-section-content .personal-information {
-  margin-top: 16px;
-  margin-bottom: 16px;
-  margin-left: 16px;
+  margin: 16px;
   font-weight: 700;
   font-size: 18px;
 }
 
 .page-content-grid .account-section .account-section-content .change-avatar {
+  margin-right: 16px;
   margin-left: 16px;
   display: -ms-grid;
   display: grid;
@@ -1075,6 +1079,7 @@ body figure {
 
 .page-content-grid .account-section .account-section-content .information-input {
   margin-top: 16px;
+  margin-right: 16px;
   margin-left: 16px;
   display: -ms-grid;
   display: grid;
@@ -1107,6 +1112,97 @@ body figure {
   font-weight: 600;
   font-size: 12px;
   color: #545563;
+}
+
+.page-content-grid .account-section .account-section-content .notification-settings {
+  margin-right: 16px;
+  margin-left: 16px;
+  margin-top: 68px;
+}
+
+.page-content-grid .account-section .account-section-content .notification-settings .email-notification {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.page-content-grid .account-section .account-section-content .notification-settings .toggle-functions {
+  margin-top: 16px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  row-gap: 24px;
+}
+
+.page-content-grid .account-section .account-section-content .notification-settings .toggle-functions .checkBox {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (fit-content(50%))[2];
+      grid-template-columns: repeat(2, fit-content(50%));
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  place-items: center;
+}
+
+.page-content-grid .account-section .account-section-content .line {
+  height: 1px;
+  width: 100%;
+  margin-top: 36px;
+  margin-bottom: 20px;
+}
+
+.page-content-grid .account-section .account-section-content .submit-changes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.page-content-grid .account-section .account-section-content .submit-changes .log-out {
+  font-weight: 700;
+  font-size: 14px;
+  color: #FF5C60;
+  border: 1px solid #FF5C60;
+  border-radius: 8px;
+  padding: 12px 16px;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  white-space: nowrap;
+}
+
+.page-content-grid .account-section .account-section-content .submit-changes .save-and-discard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+}
+
+.page-content-grid .account-section .account-section-content .submit-changes .save-and-discard .save {
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+  padding: 12px 16px;
+  background: #4E60FF;
+  -webkit-box-shadow: 0px 8px 20px rgba(78, 96, 255, 0.16);
+          box-shadow: 0px 8px 20px rgba(78, 96, 255, 0.16);
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.page-content-grid .account-section .account-section-content .submit-changes .save-and-discard .discard {
+  font-weight: 700;
+  font-size: 14px;
+  color: #83859C;
+  padding: 12px 16px;
+  border: 1px solid #83859C;
+  border-radius: 8px;
+  white-space: nowrap;
 }
 
 @media screen {
@@ -1260,6 +1356,44 @@ body figure {
     row-gap: 15px;
     -webkit-column-gap: 15px;
             column-gap: 15px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .page-content-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .page-content-grid .settings-section {
+    margin-top: 20px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (fit-content(50%))[5];
+        grid-template-rows: repeat(5, fit-content(50%));
+    row-gap: 16px;
+  }
+  .page-content-grid .account-section .account-section-content .information-input {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .page-content-grid .account-section .account-section-content .notification-settings .toggle-functions {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+  .page-content-grid .account-section .account-section-content .submit-changes {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+  .page-content-grid .account-section .account-section-content .submit-changes .log-out {
+    -ms-grid-column-align: stretch;
+        justify-self: stretch;
+    text-align: center;
+  }
+  .page-content-grid .account-section .account-section-content .submit-changes .save-and-discard {
+    justify-items: stretch;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

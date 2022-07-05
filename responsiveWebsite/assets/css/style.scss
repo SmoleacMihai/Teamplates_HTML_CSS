@@ -650,8 +650,6 @@ body{
         .nearby-restaurants{
             font-weight: 600;
             font-size: 20px;    
-            line-height: 28px;
-            letter-spacing: 0.1px;
             color: #2B2B43;
             margin-bottom: 16px;
         }
@@ -758,7 +756,8 @@ body{
         margin-top: 20px;
         display: grid;
         grid-template-columns: 1fr;
-        row-gap: 15px;
+        grid-template-rows: repeat(5, fit-content(50%));
+        row-gap: 16px;
 
         .Settings{
             font-weight: 600;
@@ -771,6 +770,8 @@ body{
             border: 1px solid #EDEEF2;
             border-radius: 16px;
             color: $secondary-color;
+            align-self: start;
+
 
             .setting{
                 padding: 10px;
@@ -805,7 +806,9 @@ body{
 
     .account-section{
         color: $secondary-color;
+        margin-top: 20px;
         .Account{
+            margin-bottom: 16px;
             font-weight: 600;
             font-size: 20px;
         }
@@ -815,14 +818,13 @@ body{
             
             
             .personal-information{
-                margin-top: 16px;
-                margin-bottom: 16px;
-                margin-left: 16px;
+                margin: 16px;
                 font-weight: 700;
                 font-size: 18px;
             }
 
             .change-avatar{
+                margin-right: 16px;
                 margin-left: 16px;
                 display: grid;
                 grid-template-columns: 1fr;
@@ -859,6 +861,7 @@ body{
 
             .information-input{
                 margin-top: 16px;
+                margin-right: 16px;
                 margin-left: 16px;
                 
                 display: grid;
@@ -886,7 +889,82 @@ body{
                     }
                 }
             }
-        } 
+
+            .notification-settings{
+                margin-right: 16px;
+                margin-left: 16px;
+                margin-top: 68px;
+                .email-notification{
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+
+                .toggle-functions{
+                    margin-top: 16px;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    row-gap: 24px;
+
+                    .checkBox{
+                        display: grid;
+                        grid-template-columns: repeat(2, fit-content(50%));
+                        column-gap: 5px;
+                        place-items: center;
+                    }
+                }
+            }
+
+            .line{
+                height: 1px;
+                width: 100%;
+                margin-top: 36px;
+                margin-bottom: 20px;
+            }
+
+            .submit-changes{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                margin-left: 16px;
+                margin-right: 16px;
+                margin-bottom: 16px;
+                .log-out{
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: #FF5C60;
+                    border: 1px solid #FF5C60;
+                    border-radius: 8px;
+                    padding: 12px 16px;
+                    justify-self: start;
+                    white-space: nowrap;
+                }
+                
+                .save-and-discard{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    place-items: center;
+                    column-gap: 5px;
+                    .save{
+                        font-weight: 700;
+                        font-size: 14px;
+                        color: #FFFFFF;
+                        padding: 12px 16px;
+                        background: $primary-color;
+                        box-shadow: 0px 8px 20px rgba(78, 96, 255, 0.16);
+                        border-radius: 8px;
+                        white-space: nowrap;
+                    }
+                    .discard{
+                        font-weight: 700;
+                        font-size: 14px;
+                        color: #83859C;
+                        padding: 12px 16px;
+                        border: 1px solid #83859C;
+                        border-radius: 8px;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }   
     }
 }
 
@@ -1073,26 +1151,45 @@ body{
     }
 }
 
-// @media screen and (min-width:1230px){
-//     .home-page-content{
-//         .restaurants-section{
-//             .grid-wraper{
-//                 display: grid;
-//                 grid-template-columns: repeat(auto-fit, minmax(350px, 3fr));
-                
-//             }
-//         }
-//     }
-// }
+@media screen and (max-width:750px){
+    .page-content-grid{
+        grid-template-columns: 1fr;
+    
+        .settings-section{
+            margin-top: 20px;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, fit-content(50%));
+            row-gap: 16px;
+        }
+    
+        .account-section{
+            .account-section-content{
+    
+                .information-input{
+                    grid-template-columns: 1fr;
+                }
+    
+                .notification-settings{
+                    .toggle-functions{               
+                        grid-template-columns: 1fr;
+                        row-gap: 24px;
+                    }
+                }
 
-// // @media screen and (min-width:9px){
-// //     .home-page-content{
-// //         .restaurants-section{
-// //             .grid-wraper{
-// //                 display: grid;
-// //                 grid-template-columns: repeat(auto-fit, minmax(245px, 3fr));
-                
-// //             }
-// //         }
-// //     }
-// // }
+    
+                .submit-changes{
+                    grid-template-columns: 1fr;
+                    row-gap: 10px;
+                    .log-out{
+                        justify-self: stretch;
+                        text-align: center;
+                    }
+                    .save-and-discard{
+                        justify-items: stretch;
+                        text-align: center;
+                    }
+                }
+            }   
+        }
+    }
+}
